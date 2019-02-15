@@ -1,4 +1,5 @@
 {%extends "rest_app/base.html"%}
+{% load staticfiles %}
 {%block content%}
 	
 	<p>
@@ -8,5 +9,11 @@ plateformes d’analyse Data Mining, intelligence artificielle et machine learni
 traiter et analyser les données et les experiences deja effectués du compound afin d’établir des
 statistiques descriptives et prédire une optimisation efficace en terme du temps en remplaçant
 l’ancienne methode de trial-errors.</p>
-	
+<h1>extensibility {{cara.extensibility}}</h1>
+
+
+	<img src="{% static 'rest_app/carac.png' %}">
+	<h2>the composition needed </h2>
+	<img src="{% static 'rest_app/composition.png' %}">
+
 {%endblock content%}

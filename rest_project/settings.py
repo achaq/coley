@@ -31,13 +31,16 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'rest_app.apps.RestAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_app',
+    'users.apps.UsersConfig',
+    'crispy_forms',
+    
 ]
 
 MIDDLEWARE = [
@@ -125,3 +128,19 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
+
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+MEDIA_URL='/media/'
+
+CRISPY_TEMPLATE_PACK='bootstrap4'
+LOGIN_REDIRECT_URL='home'
+LOGIN_URL='login'
+
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_HOST_USER='abdelkarimachaq@gmail.com'
+EMAIL_HOST_PASSWORD='jhamthfuailrjzcq'
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
