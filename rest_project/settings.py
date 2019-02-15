@@ -143,4 +143,4 @@ EMAIL_USE_TLS=True
 EMAIL_HOST_USER='abdelkarimachaq@gmail.com'
 EMAIL_HOST_PASSWORD='jhamthfuailrjzcq'
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
