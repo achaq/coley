@@ -1,6 +1,142 @@
 {%extends "rest_app/base.html"%}
+{% load staticfiles %}
 {%block content%}
 <p>
 PVC pipe and fittings use a nominal system for standard sizing. This is so all parts with the same size in their name will be compatible with each other. All 1" fittings will fit on 1" pipe, for example. That seems pretty straightforward, right? Well here's the confusing part: the outer diameter (OD) of PVC pipe is greater than the size in its name. That means that 1" PVC pipe will have an OD that is greater than 1", and a 1" PVC fitting will have an even larger OD than the pipe.
 </p>
+
+
+<h2 class="article-title">here is the composition needed for the fitting :</h2>
+      
+
+<div class="article-metadata">
+                <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">name</th>
+                
+                <th scope="col">quantity GPR</th>
+			<th scope="col">PRICE</th>
+ 
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+ 
+                <td>pvc_k</td>
+                <td>{{ compound.pvc }}</td>
+                <td>{{ price.pvc_k }}</td>
+
+
+              </tr>
+                            <tr>
+ 
+                <td>PA310</td>
+                <td>{{ compound.PA310 }}</td>
+                <td>{{ price.PA310 }}</td>
+                
+              </tr>
+                            <tr>
+ 
+                <td>PED</td>
+                <td>{{ compound.PED }}</td>
+                <td>{{ price.PED }}</td>
+                
+              </tr>
+                            <tr>
+ 
+                <td>GMS</td>
+                <td>{{ compound.GMS }}</td>
+                <td>{{ price.GMS }}</td>
+                
+              </tr>
+			<tr>
+ 
+                <td>Di-N-Octyl</td>
+                <td>{{ compound.DIN }}</td>
+                <td>{{ price.DIN }}</td>
+              </tr>
+
+			<tr>
+ 
+                <td>HSE</td>
+                <td>{{ compound.HSE }}</td>
+                <td>{{ price.HSE }}</td>
+              </tr>
+			<tr>
+ 
+                <td>BLEU</td>
+                <td>{{ compound.BLEU }}</td>
+                <td>{{ price.BLEU }}</td>
+              </tr>
+              			<tr>
+ 
+                <td>VIOLET</td>
+                <td>{{ compound.VIOLET }}</td>
+                <td>{{ price.VIOLET }}</td>
+              </tr>
+
+              </tr>
+              			<tr>
+ 
+                <td>TIO2</td>
+                <td>{{ compound.TIO2 }}</td>
+                <td>{{ price.TIO2 }}</td>
+              </tr>
+                            </tr>
+              			<tr>
+ 
+                <td>NOIR</td>
+                <td>{{ compound.NOIR }}</td>
+                <td>{{ price.NOIR }}</td>
+              </tr>
+              			<tr>
+ 
+                <td>S-CA</td>
+                <td>{{ compound.SCA }}</td>
+                <td>{{ price.SCA }}</td>
+              </tr>
+
+
+                            			<tr>
+ 
+                <td>FM50/56</td>
+                <td>{{ compound.FM50 }}</td>
+                <td>{{ price.FM50 }}</td>
+              </tr>
+
+                            			<tr>
+ 
+                <td>KANE Ace</td>
+                <td>{{ compound.Kane }}</td>
+                <td>{{ price.Kane }}</td>
+              </tr>
+
+                            			<tr>
+ 
+                <td>MB NOIR</td>
+                <td>{{ compound.MBN }}</td>
+                <td>{{ price.MBN }}</td>
+              </tr>
+
+                                       			<tr>
+ 
+                <td>3TS</td>
+                <td>{{ compound.3TS }}</td>
+                <td>{{ price.3TS }}</td>
+              </tr>
+	<tr>
+ 
+                <td>PRICE</td>
+                <td>------</td>
+                <td>{{ price.PRICE }}</td>
+	</tr>
+
+
+            </tbody>
+          </table>
+      
+    </div>
+
+
 {%endblock content%}

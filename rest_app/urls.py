@@ -22,6 +22,9 @@ urlpatterns = [
     path('newmat/', views.newmat, name='newmat'),
     path('pressure/', views.pressure, name='pressure'),
     path('fitting/', views.fitting, name='fitting'),
+    path('shoe/', views.shoe, name='shoe'),
+    path('sheet/', views.sheet, name='sheet'),
+    path('cable/', views.cable, name='cable'),
     path('calculated/', views.calculated, name='calculated'),
 ]
 

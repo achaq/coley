@@ -12,7 +12,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity=sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -34,9 +34,25 @@
 		      <div class="collapse navbar-collapse" id="navbarToggle">
 		        <div class="navbar-nav mr-auto">
 		        	<a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
-		          <a class="nav-item nav-link" href="{% url 'pressure' %}">pressure_pipe</a>
-		          <a class="nav-item nav-link" href="{% url 'fitting' %}">fitting</a>
-		          <a class="nav-item nav-link" href="{% url 'compound-create' %}">new instance</a>
+		         
+
+		<div>
+			<li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          existing compounds
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		          <a class="dropdown-item" href="{% url 'fitting' %}">Un-plasticized PVC Pipe (Rigid)</a>
+		          <a class="dropdown-item" href="{% url 'pressure' %}">pressure pipe compound</a>
+		          <a class="dropdown-item" href="{% url 'shoe' %}">shoe compound.</a>
+		          <a class="dropdown-item" href="{% url 'sheet' %}">PVC Rigid sheet</a>
+		          <a class="dropdown-item" href="{% url 'cable' %}">cable compound</a>
+		          
+		        </div>
+		      </li>
+    	</div>
+
+		          <a class="nav-item nav-link" href="{% url 'compound-create' %}">new compound</a>
 		          <b><a class="nav-item nav-link" href="{% url 'newmat' %}">Predict the Composition</a></b>
 		          <small><a class="nav-item nav-link" href="{% url 'about' %}">about the project</a></small>
 		        </div>
@@ -72,12 +88,16 @@
 		    <div class="col-md-4">
 		      <div class="content-section">
 		        <h3>Our Sidebar</h3>
-		        <p class='text-muted'>You can put any information here you'd like.
+		        <p class='text-muted'>You can look up any formula !.
 		          <ul class="list-group">
-		            <li class="list-group-item list-group-item-light">Latest Posts</li>
-		            <li class="list-group-item list-group-item-light">Announcements</li>
-		            <li class="list-group-item list-group-item-light">Calendars</li>
-		            <li class="list-group-item list-group-item-light">etc</li>
+		           <form class="form-inline" action="#">
+    			<div class="input-group">
+      			<div class="input-group-prepend">
+        		<span class="input-group-text">formula</span>
+      			</div>
+      			<input type="text" class="form-control" placeholder="exp: T206">
+    			</div> 
+  				</form>
 		          </ul>
 		        </p>
 		      </div>

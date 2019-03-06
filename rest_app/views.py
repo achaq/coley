@@ -52,12 +52,95 @@ def newmat(request):
 
 
 def fitting(request):
-	return render(request,'rest_app/fitting.html')
+	#labels = 'pvc_k_67','pvc_H2' ,'TIO2', 'NOIR','BLEU','Lubricant'
+	#sizes = [95.5,4.5, 0.1, 0.01,0.05,25]
+	#colors = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue','red','b']
+	#explode = (0,0.1,0.2, 0.3, 0.4, 0.5)  # explode 1st slice
+	
+	# Plot
+	#plt.pie(sizes, explode=explode, labels=labels, colors=colors,autopct='%1.4f%%', shadow=True, startangle=180)
+	#plt.savefig('rest_app/static/rest_app/fitting.png')
+	#plt.close()
+	context = {
+               'compound' : { 'pvc' : 100, 'PA310' : 1.6 ,
+               'PED' : 0.45, 'GMS' : 0.41 ,
+               'DIN' : 1.47, 'HSE' : 1.93 ,
+				'BLEU' : 0, 'VIOLET' : 0.01 ,
+				'TIO2' : 1.55,
+				'NOIR' : 0, 'SCA' : 0 ,
+				'FM50' : 0, 'Kane' : 0 ,
+				'MBN' : 0, '3TS' : 0 ,
+               },
+
+     			'price' : { 'pvc_k' : 9.94, 'PA310' : 33.45 ,
+               'PED' : 43.15, 'GMS' : 17.49 ,
+               'DIN' : 74.94, 'HSE' : 15.61 ,
+				'BLEU' : 53.75, 'VIOLET' : 86.81 ,
+				'TIO2' : 34.3,
+				'NOIR' : 86.4, 'SCA' : 16.38 ,
+				'FM50' : 23.04, 'Kane' : 26.08 ,
+				'MBN' : 20.00, '3TS' : 1.28 ,
+               },
+
+	}
+	
+	return render(request,'rest_app/fitting.html',context)
 	
 
-def pressure(request):
-	return render(request,'rest_app/pressure.html')
 
+
+def pressure(request):
+	context = {
+               'compound' : { 'pvc_k' : 95.5, 'pvc_H2' : 4.5 ,
+               'TIO2' : 0.1, 'NOIR' : 0.01 ,
+               'BLEU' : 0.05, 'Lubricant' : 25.0 ,},
+
+     			'price' : { 'pvc_k' : 9.94, 'pvc_H2' : 7.45 ,
+               'TIO2' : 34.3, 'NOIR' : 86.4 ,
+               'BLEU' : 53.75, 'Lubricant' : 1.28 ,},
+                         
+	}
+	return render(request,'rest_app/pressure.html',context)
+
+
+def shoe(request):
+	context = {
+               'compound' : { 'pvc_k' : 95.5, 'pvc_H2' : 4.5 ,
+               'TIO2' : 0.1, 'NOIR' : 0.01 ,
+               'BLEU' : 0.05, 'Lubricant' : 25.0 ,},
+
+     			'price' : { 'pvc_k' : 9.94, 'pvc_H2' : 7.45 ,
+               'TIO2' : 34.3, 'NOIR' : 86.4 ,
+               'BLEU' : 53.75, 'Lubricant' : 1.28 ,},
+                         
+	}
+	return render(request,'rest_app/shoe.html',context)
+
+def sheet(request):
+	context = {
+               'compound' : { 'pvc_k' : 95.5, 'pvc_H2' : 4.5 ,
+               'TIO2' : 0.1, 'NOIR' : 0.01 ,
+               'BLEU' : 0.05, 'Lubricant' : 25.0 ,},
+
+     			'price' : { 'pvc_k' : 9.94, 'pvc_H2' : 7.45 ,
+               'TIO2' : 34.3, 'NOIR' : 86.4 ,
+               'BLEU' : 53.75, 'Lubricant' : 1.28 ,},
+                         
+	}
+	return render(request,'rest_app/sheet.html',context)
+
+def cable(request):
+	context = {
+               'compound' : { 'pvc_k' : 95.5, 'pvc_H2' : 4.5 ,
+               'TIO2' : 0.1, 'NOIR' : 0.01 ,
+               'BLEU' : 0.05, 'Lubricant' : 25.0 ,},
+
+     			'price' : { 'pvc_k' : 9.94, 'pvc_H2' : 7.45 ,
+               'TIO2' : 34.3, 'NOIR' : 86.4 ,
+               'BLEU' : 53.75, 'Lubricant' : 1.28 ,},
+                         
+	}
+	return render(request,'rest_app/cable.html',context)
 
 
 
